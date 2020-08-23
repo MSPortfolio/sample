@@ -1,0 +1,540 @@
+@charset "UTF-8";
+/*ハンバーガーメニュー*/
+#c-humbmenu {
+	padding-left: 20px;
+}
+.c-nav_toggle {
+    display: block;
+    position: relative;
+    width: 1.75rem;
+    height: 1.5rem;
+}
+.c-nav_toggle i {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #7F7F7F;
+    position: absolute;
+    transition: transform .5s, opacity .5s;
+}
+}
+.c-nav_toggle i:nth-child(1) {
+    top: 0;
+}
+.c-nav_toggle i:nth-child(2) {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.c-nav_toggle i:nth-child(3) {
+    bottom: 0;
+}
+
+
+.c-nav_toggle.show i:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+}
+.c-nav_toggle.show i:nth-child(2) {
+    opacity: 0;
+}
+.c-nav_toggle.show i:nth-child(3) {
+    transform: translateY(-12px) rotate(45deg);
+}
+
+.c-humblist {
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+    z-index: 2;
+}
+header{
+	z-index: 1;
+}
+.c-humblist.show {
+    opacity: 1;
+    visibility: visible;
+}
+.c-nav_menu_ul{
+	width: 250px;
+	height: 230px;
+	background-color: rgba(0,0,0,0.7);
+	padding-left: 0;
+}
+.c-nav_menu_ul li{
+	list-style: none;
+	padding-top: 17px;
+	text-align: center;
+}
+.c-nav_menu_ul a{
+	color:white;
+    font-size: 15px;
+}
+
+/*ナビゲーションバー*/
+.c-navbar{
+	display: flex;
+	height: 100px;
+	justify-content: space-between;
+	align-items: center;
+}
+.c-logo{
+		padding-left: 20px;
+}
+.c-list ul{
+	display: flex;
+	list-style: none;
+	margin-bottom: 0;
+	padding-right: 20px;
+	padding-left: 0px;
+}
+.c-list ul li{
+	padding-right: 30px;
+}
+.c-carticon-menu{
+	color: #7F7F7F;
+	padding-right: 20px;
+	font-size: 20px;
+	padding-top: 7px;
+}
+.c-carticon-menu p{
+	font-size: 7px;
+	margin: 0;
+}
+
+
+
+/*ここからheader*/
+
+
+/*slickの場合*/
+/*.slider{
+	list-style: none;
+	width: 85%;
+	margin: 0 auto;
+	padding-inline-start: 0px;
+}
+
+.slider li img {
+    max-width: 100%;
+    height: auto;
+}*/
+
+/*.c-kv {
+	margin: 0;
+	padding: 0;*/
+	/*スライドの上にテキストを見せる時*/
+	/*position: relative;*/
+/*}*/
+
+
+/*スライドの上にテキスト見せる時*/
+/*このopacityいったん全てのテキストインフォを消す*/
+/*.c-sliderinfo li{	
+	opacity: 0;
+	transition: all 0.4s;
+	width: 50%;
+	list-style: none;
+	position: absolute;
+	padding: 20px;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	background:#fff;
+	z-index: 10; 
+}*/
+
+/*これはテキストinfoを見せる*/
+
+/*.c-sliderinfo li.is-show{
+	opacity: 1;
+}*/
+
+
+
+.container{
+	padding: 0;
+}
+
+/*スライドアニメ*/
+
+.c-itemonslide{
+	width: 25%;
+
+}
+.c-itemonslide img{
+	width: 100%;
+	}
+
+.c-itemonslide{
+	animation-name: sizeChange;
+	animation-duration: 0.5s;
+	/*アニメを次のスライドでも続ける*/
+	animation-timing-function: linear;
+}
+
+@keyframes sizeChange{
+    0% {
+        opacity: 0;
+        width: 50%;
+/*        transform: translate(-20%,-20%);*/
+
+    }
+    100% {
+        opacity: 1;
+        width: 25%;
+/*        transform: translate(-20%,-20%);*/
+    }
+}
+
+.carousel-inner {/*親div*/
+  position: relative;/*相対配置*/
+  }
+
+.carousel-item .c-itemonslide {
+  position: absolute;
+  top: 18%;
+  left: 15%;
+  margin:0;
+  padding:0;
+  }
+
+
+.carousel-item img {
+  width: 100%;
+  }
+
+.c-itemonslide button{
+	background: none;
+	color: white;
+	border: 1px solid 0.5;
+	border-color: white;
+	font-size: 0.7rem;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 30px;
+}
+
+.c-itemonslide {
+	text-align: center;
+}
+/*スライド2のアニメ*/
+.carousel-item .c-itemonslide-2{
+  position: absolute;
+  top: 35%;
+  left: 68%;
+  margin:0;
+  padding:0;
+  }
+
+.c-itemonslide-2{
+	width: 25%;
+}
+.c-itemonslide-2 img{
+	width: 100%;
+	}
+.c-itemonslide-2{
+	animation-name: fadeIna;
+	animation-duration: 3s;
+}
+@keyframes fadeIna{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*スライド３のアニメ*/
+.carousel-item .c-itemonslide-3{
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  margin:0;
+  padding:0;
+  }
+
+.c-itemonslide-3{
+	width: 25%;
+}
+.c-itemonslide-3 img{
+	width: 100%;
+	}
+.c-itemonslide-3{
+	animation-name: fadeIn;
+	animation-duration: 3s;
+}
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/*ここからmain*/
+
+/*3つのbox*/
+.c-boxes{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);	
+	gap:1rem;	
+	align-items: center;
+
+}
+.c-roundbox{
+	border-radius: 5px;
+	border: 1px solid #D0D0D0;
+	padding: 0;
+
+	}
+.c-roundbox01 h1{
+	padding: 10px;
+}
+.c-roundbox01 img{
+	text-align: center;
+}
+.c-roundbox01 p{
+	padding-left: 10px;
+}
+
+.c-roundbox:hover{
+	box-shadow: 2px  2px 8px 2px rgb(28, 95, 157, 0.1);
+
+}
+
+
+/*２つのボタン*/
+.c-btnbox{
+	padding-top: 30px;
+ 
+}
+.c-btns{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap:2rem;
+	
+}
+.c-shopbtn{
+	text-align: center;
+	line-height: 60px;
+	height: 60px;
+	border: 1px solid #8ba9c4;
+	border-radius: 5px;
+	color:#1C5F9D;
+	
+	background-color: #fff;
+}
+.c-shopbtn:hover{
+	text-align: center;
+	height: 60px;
+	border: 1px solid #1C5F9D;
+	border-radius: 5px;
+	color: #1C5F9D;
+	
+	background-color: #eff6fc;
+}
+/*１つのbox*/
+.c-longbox01{
+	margin-bottom: 30px;
+	margin-top: 30px;
+	border:1px solid #a9aaac;
+	border-radius: 5px;
+
+}
+.c-longbox02{
+	margin-bottom: 30px;
+	border:1px solid #a9aaac;
+	border-radius: 5px;
+}
+.c-longbox01:hover{
+	box-shadow: 2px  2px 8px 2px rgb(28, 95, 157, 0.1);
+}
+.c-longbox02:hover{
+	box-shadow: 2px  2px 8px 2px rgb(28, 95, 157, 0.1);
+}
+/*iconのところ*/
+.c-iconright{
+	height: 120px;
+}
+.c-iconright p{
+	padding-right: 10px;
+}
+.c-iconbox1{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-right: 1px solid #D0D0D0;
+}
+.c-iconbox1:last-child{
+	border-right: none;
+}
+.c-iconleft{
+	width: 30%;
+	font-size: 40px;
+	text-align: center;
+	color: #1C5F9D;
+}
+.c-iconright{
+	width: 70%;
+}
+
+
+/*お知らせ部分*/
+.c-news{
+	padding-bottom: 35px;
+	padding-top: 35px;
+}
+.c-newsbox{
+	display: flex;
+	justify-content: space-between;
+	font-size: 11px;
+	border-top:1px solid #D0D0D0;
+	height: 60px;
+	align-items: center;
+	padding: 0;  
+}
+.c-date{
+	padding-right: 50px;
+	width: 15%;
+	font-weight: bold;
+	padding: 0;  
+	margin: 0;
+}
+.c-newstitle{
+	padding-right: 20px;
+	width: 15%;
+	font-weight: bold;
+	padding: 0;  
+	margin: 0;
+}
+.c-newstext{
+	width: 70%;
+	padding: 0;  
+	margin: 0;
+}
+.c-pr{
+	padding-bottom: 35px;
+	padding-top: 35px;
+}
+/*ここかfooter*/
+.c-footerlist ul{
+	display: flex;
+    justify-content: space-around;
+    list-style: none;
+    color: #fff;
+    font-size: 13px;
+    padding: 30px 0 10px 0;
+}
+.c-fottercopy{
+	color: #fff;
+	text-align: center;
+	font-size: 8px;
+}
+
+
+
+
+
+
+@media (max-width: 992px){
+/*	.c-boxes{
+    grid-template-columns: repeat(3,1fr);
+	}*/
+
+}
+@media (max-width: 576px){
+.c-boxes{
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+	}
+.c-roundbox01<img {
+	align-items: center;
+}
+   .carousel-item{
+        height: 100vh;
+    }
+    .carousel-item img{
+        height: 100%;
+        display: block;
+        width: 100%;
+        object-fit: cover
+    }
+.c-list{
+	display:none;
+}
+}
+@media screen and (min-width:576px) {
+  #c-humbmenu {
+    display:none;
+  }
+}
+
+@media screen and (max-width: 576px){
+
+/*スライドテキストアニメーション*/
+	.c-itemonslide{
+	width: 50%;
+}
+@keyframes sizeChange{
+    0% {
+        opacity: 0;
+        width: 70%;
+
+    }
+    100% {
+        opacity: 1;
+        width: 50%;
+    }
+}
+@keyframes fadeIna{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.carousel-item .c-itemonslide-2{
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  margin:0;
+  padding:0;
+  }
+
+.c-itemonslide-2{
+	width: 60%;
+}
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.carousel-item .c-itemonslide-3{
+  position: absolute;
+  top: 5%;
+  left: 30%;
+  margin:0;
+  padding:0;
+  }
+
+.c-itemonslide-3{
+	width: 50%;
+}
+
+}
+

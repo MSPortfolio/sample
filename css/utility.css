@@ -1,0 +1,29 @@
+@charset "UTF-8";
+.u-menu{
+	font-size: 14px;
+	font-style: bold;
+	color: #7F7F7F;
+}
+.u-boxtitle{
+	font-family: "Source Han Serif;",ＭＳ 明朝, serif;
+	color: #282828;
+	font-size: 1.2rem;
+}
+.u-boxtext{
+	color: #282828;
+	font-size: 0.7rem;
+}
+.u-bluetexttitle{
+	color: #1C5F9D;
+}
+.u-bluetitel{
+	font-family: "BiauKai",Times, serif;
+	letter-spacing: 0px;
+	color: #1C5F9D;
+	font-size: 30px;
+}
+.u-infoh2gray{
+	font-family: "Source Han Serif;",ＭＳ 明朝, serif;
+	color: #444444;
+	font-size: 15px;
+}

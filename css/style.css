@@ -1,0 +1,52 @@
+body {
+/*    width: 800px;*/
+    margin: 0 auto;
+    min-height: 100vh;
+    display: grid;
+    grid-template:
+        "... ...... ...... ...... ...... ...... ..." 
+        "... navbar navbar navbar navbar navbar ..." 100px
+        "... ...... ...... ...... ...... ...... ..." 0px
+        "... header header header header header ..." 
+        "... ...... ...... ...... ...... ...... ..." 20px
+        "... content content content content content  ..." 
+        "... ...... ...... ...... ...... ...... ..." 40px
+        "... footer footer footer footer footer ..." 150px
+        "... ...... ...... ...... ...... ...... ..."
+        / 50px 1fr auto 1fr auto 1fr 50px;
+}
+nav {
+    grid-area: navbar;
+    background-color: white;
+}
+header {
+    grid-area: header;
+    background-color: white;
+}
+main {
+    grid-area: content;
+    background-color: white;
+}
+footer {
+    grid-area: footer;
+    background-color: #1B3456;
+}
+@media screen and (max-width: 768px) {
+    body {
+        grid-template:
+            "navbar" 100px
+            "header" 
+            "content" 1fr
+            "footer" 150px;
+    }
+}
+@media screen and (max-width: 576px) {
+    body {
+        grid-template:
+            "navbar" 100px
+            "header" 
+            "content" 1fr
+            "footer" 150px;
+    }
+}
+
